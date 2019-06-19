@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<head>
+<title>我的例子</title>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<link type="text/css" rel="stylesheet" href="demo.css"/>
+
+</head>
+
+<body>
+
+<div id="head">
+<p class="ztitle">示例</p>
+
+ </div>
+
+<div id="main"> 
+<div id="left">
+<ul class="cdan">
+<li data-id="file" class="current"><span class="iconfont iconText"></span>全部文件</li>
+<li data-id="copytxt"><span class="lipad">点击按钮复制文本</span></li>
+<li data-id="txt1"><span class="lipad">示例2</span></li>
+<li data-id="film"><span class="lipad">示例3</span></li>
+<li data-id="txt"><span class="lipad">示例4</span></li>
+</ul>
+
+</div>
+<div id="right">
+<div class="title1">
+<h3>控制台  <span class="sm"><small>欢迎使用***后台管理系统</small></span></h3>
+<HR style="FILTER:alpha(opacity=100,finishopacity=0,style=2)" width="100%"color=#CCC SIZE=1>
+</div>
+
+
+
+<div id="content">
+
+
+
+</div>
+
+</div>
+</div>
+<div class="clear"></div>
+<div id="boot">底部 </div>
+<script>
+
+$(document).ready(function(){ 
+ //文档就绪事件
+ var sid="yuanshi";
+/** if(sid=="yuanshi"){
+ trace();
+ }
+ function trace(){
+  $("#content").load("demo1.html");
+ }
+ **/
+
+$(".cdan").on("click","li",function(){
+sid=$(this).data("id");
+console.log(sid);
+  //设置锚点;
+loadInner(sid);
+
+});
+function loadInner(sid){
+var pathn,i;
+switch(sid){
+case "yuanshi":
+  pathn="demo1.html";
+  i=0;
+case "file":
+  pathn="demo1.html";
+  i=0;
+  break;
+case "copytxt":
+  //alert(sid);
+  pathn="pictures.html";
+  i=1;
+  break;
+case "txt1":
+  pathn="seed.html";
+  i=2;
+  break;
+case "film":
+  pathn="film.html";
+  i=3;
+  break;
+case "txt":
+  pathn="film.html";
+  i=4;
+  break;
+}
+$("#content").load(pathn); //加载对应的内容
+$(".cdan li").eq(i).addClass("current").siblings().removeClass("current");
+}
+
+loadInner(sid);
+
+});
+
+
+
+</script>
+</body>
+
+
+</html>

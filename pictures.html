@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+<title>点击按钮复制文本</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<style type="text/css">
+#ina{
+display:none;
+}
+
+</style>
+</head>
+<body>
+<p id="copytxt1">点击按钮复制文本</p>
+<textarea id="ina"></textarea>
+<button onclick="copyTxt()">复制链接</button>
+
+<input id="input" value="http://www.baidu.com"/>
+<script>
+function copyTxt(){
+var txt=document.getElementById("copytxt1").innerText;
+var ina=document.getElementById("ina");
+ina.value=txt;
+ina.select();
+document.execCommand("copy");
+alert("已复制好链接，打开手机淘宝即可");
+//点击按钮复制文本点击按钮复制文本
+}
+
+</script>
+</body>
+</html>

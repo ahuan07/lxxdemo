@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/demo_css.css" />
+
+<title>js正则表达式</title>
+</head>
+<body>
+<div id="jsdemos">
+<p class="jtitle">javascript examples--正则表达式</p>
+<div class="code">
+<p>代码如下</p>
+<textarea htmlEscape="true" style="overflow:auto;width:600px;height:600px;">
+
+
+</textarea>
+</div>
+Email地址：<input id="email" type="text" name="email" />
+<button onclick="isEmail()">验证email地址</button>
+<div style="text-align:center"><button onclick="window.history.go(-1)">返回</button></div>
+</div>
+<script>
+
+function isEmail(){
+var emailstr=document.getElementById("email").value;
+var patt=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+var flag=patt.test(emailstr);
+console.log(emailstr);
+if (flag==true){
+alert("email地址有效！");
+}
+else{
+alert("email地址无效！");
+}
+
+}
+
+
+</script>
+</body>
+</html>

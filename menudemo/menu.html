@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="caidan.css" />
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<title>
+二级菜单
+</title>
+
+</head>
+<body>
+<div id="menubox">
+    <ul>
+        <li><a href="#http://www.51xuediannao.com/"><b>懒人建站</b></a></li>
+            <div class="submenu li1">
+                <a href="#http://www.51xuediannao.com/js/nav/">导航菜单</a>
+                <a href="#">二级子菜单1</a>
+                <a href="#">二级子菜单1</a>
+                <a href="#">二级子菜单1</a>
+            </div>
+        
+        <li><a href="#http://www.51xuediannao.com/js/slide/"><b>焦点幻灯片</b></a></li>
+            <div class="submenu li2">
+                <a href="#">二级子菜单2</a>
+                <a href="#">二级子菜单2</a>
+                <a href="#">二级子菜单2</a>
+                <a href="#">二级子菜单2</a>
+            </div>
+        
+        <li><a href="#http://www.51xuediannao.com/js/gg/"><b>广告代码</b></a></li>
+            <div class="submenu li3">
+                <a href="#">二级子菜单3</a>
+                <a href="#">二级子菜单3</a>
+                <a href="#">二级子菜单3</a>
+                <a href="#">二级子菜单3</a>
+            </div>
+       
+        <li><a href="#http://www.51xuediannao.com/js/texiao/"><b>网页特效</b></a></li>
+            <div class="submenu li4">
+                <a href="#">二级子菜单4</a>
+                <a href="#">二级子菜单4</a>
+                <a href="#">二级子菜单4</a>
+            </div>
+        
+    </ul>
+</div>
+<script>
+$(document).ready(function(){
+//$(".submenu").hide();
+var list=document.getElementById("menubox");
+var lista=list.getElementsByTagName("li");
+//var i=0;
+$(lista[0]).click(function(){
+if($(".li1").css('display')=="none"){
+$(".li1").css('display','block');
+}
+else{
+$(".li1").css('display','none');
+}
+ 
+});
+$(lista[1]).click(function(){
+if($(".li2").css('display')=="none"){
+$(".li2").css('display','block');
+}
+else{
+$(".li2").css('display','none');
+}
+});
+$(lista[3]).click(function(){
+if($(".li4").css('display')=="none"){
+$(".li4").css('display','block');
+}
+else{
+$(".li4").css('display','none');
+}
+});
+$(lista[2]).click(function(){
+if($(".li3").css('display')=="none"){
+$(".li3").css('display','block');
+}
+else{
+$(".li3").css('display','none');
+}
+});
+});
+</script>
+</body>
+</html>

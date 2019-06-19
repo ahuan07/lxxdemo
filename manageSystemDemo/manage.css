@@ -1,0 +1,130 @@
+body{
+    margin: 0 auto;
+ }
+.pg_header{
+    height: 48px;
+    background-color: #2459a2;
+    color: white;
+}
+.pg_content{
+width:100%;
+height:100%;
+position:fixed;
+ /*位置绝对*/
+}
+.pg_content .menu{
+          
+            top:50px;
+            left:0;
+            bottom:0;
+            width:11%;
+			float:left;
+            background-color: #335599;
+			color:#ddd;
+			height:100%;
+}
+
+.pg_content .content{
+            width:auto;
+            top: 50px;
+            right: 0;
+            bottom: 0;
+            float:left;
+	
+            /*background-color: darkturquoise;*/
+            overflow: auto;/*内容超过窗口，出现滚动条*/
+			height:100%;
+			width:87%;
+        }
+ul{
+	margin:0;
+	list-style-type:none;
+}
+ul li{
+	display:block;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+	margin-right:150px;
+}
+
+#logo{
+	width:215px;
+	height:48px;
+	background-image:url(images/logo.png);
+}
+.info{
+position:absolute;
+font-size:14px;
+display:none;
+}
+.info a{
+padding-left:5px;
+text-decoration:none;
+display:block;
+height:25px;
+line-height:25px;
+color:#33a;
+}
+.cdan{
+padding-left:0;
+margin-top:10px;
+}
+.cdan li{
+padding-left:15px;
+line-height:35px;
+height:35px;
+
+}
+.cdan li:hover{
+color:#fff;
+}
+.submenu1 a{
+overflow:hidden;
+text-decoration:none;
+color:#ddd;
+}
+.submenu1 a:hover{
+color:white;
+}
+.submenu1,.submenu2
+{
+padding:0;
+display:none;
+}
+.submenu1 a,
+.submenu2 a{
+display:block;
+padding-left:20px;
+font-size:15px;
+height:33px;
+line-height:33px;
+background-color:#336699;
+
+}
+.menu1,.menu2{
+padding:0;
+width:100%；
+
+}
+#lefttitle{
+width:2%;
+height:25px;
+padding:0;
+line-height:25px;
+float:left;
+height:100%;
+background-color:rgb(125,150,200,0.3);
+}
+.rt{
+float:right;
+margin-right:7px;
+}
+.pg_footer{
+height:100px;
+width:100%;
+
+}

@@ -1,0 +1,39 @@
+
+#menubox {
+	color:#000;
+}
+#menubox ul{
+	width:150px;
+}
+
+#menubox ul li{
+	display:block;
+	list-style-type:none;
+	height:30px;
+	line-height:30px;
+}
+a:link{
+	color:000;
+}
+a:visited{
+	color:000;	
+}
+a:hover{
+	color:00C;
+}
+a:active{
+	color:00C;
+}
+a{
+	text-decoration:none;
+}
+.submenu a{
+	display:block;
+	color:#333;
+	height:30px;
+	lineheight:30px;
+}
+.submenu {
+	display:none;
+}
+

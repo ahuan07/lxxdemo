@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/demo_css.css" />
+
+<title>js错误处理</title>
+</head>
+<body>
+<div id="jsdemos">
+<p class="jtitle">javascript examples--闭包函数</p>
+<div class="main_c">
+<span>不管输入是否正确，输入框都会再输入后清空。</span>
+<p>请输入 5 ~ 10 之间的数字：</p>
+<input type="text" id="inputNum" />
+<button onclick="validateNum()">点我</button>
+<p id="msg"></p>
+</div>
+<div class="code">
+<p>代码如下</p>
+<textarea htmlEscape="true" style="overflow:auto;width:600px;height:400px;">
+
+</textarea>
+</div>
+</div>
+<script>
+function validateNum(){
+var txt=document.getElementById("inputNum").value;
+var msg=document.getElementById("msg");
+try{
+var x=Number(txt);
+if (txt=="") throw "值是空的";
+if(isNaN(x)) throw "值不是一个数字";
+
+if(x>10) throw "值太大";
+if(x<5) throw "值太小";
+if(x>=5||x<=10) 
+msg.innerHTML="提示：值正确.";
+}catch(err){
+console.log(err);
+msg.innerHTML="提示："+err+".";
+}
+finally{
+document.getElementById("inputNum").value="";
+}
+}
+
+</script>
+</body>
+</html>

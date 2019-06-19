@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+<title>后台管理系统demo1</title>
+<link rel="stylesheet" type="text/css" href="manage.css" />
+<link rel="stylesheet" href="font_icon0605/iconfont.css">
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<meta charset="UTF-8" />
+</head>
+<body>
+<div class="pg_header">
+<ul>
+<li id="logo" class="left" ></li>
+
+<li class="right">
+<span id="serv"><img src="images/service.png" /></span>
+<div class="info">
+<a href="#">我的信息</a>
+<a href="#">注销</a>
+<a>修改密码</a>
+<a>修改头像</a>
+</div>
+</li>
+
+</ul>
+
+</div>
+<div class="pg_content">
+  
+    <div class="menu">
+	
+	<ul class="cdan">
+	<li>首页</li>
+	<li data-id="1">JS实例<span class="iconfont iconRadioRight" style="float:right;margin-right:20px"></span></li>
+	<div class="menu1">
+	<div class="submenu1">
+	<a href="rolemanage.html" target="mainframe">js实现分页效果</a>
+	<a href="jsdemo2.html" target="mainframe">js document.write方法</a>
+	<a href="jsdemo1.html" target="mainframe">单独js文件</a>
+	<a href="jsdemos.html" target="mainframe">更多js示例</a>
+	</div>
+	
+	</div>
+	
+	<li>用户管理</li>
+	
+	<li data-id="2">商品管理<span class="iconfont iconRadioRight" style="float:right;margin-right:20px"></span></li>
+	
+    <div class="menu2">
+	<div class="submenu2">
+	<a>商品信息管理</a>
+	<a>商品分类管理</a>
+	
+	</div>
+	
+	</div>
+	
+	</ul>
+	
+	
+	
+	</div>
+	
+	<div id="lefttitle"><span class="iconfont iconList rt"></span></div>
+    <div class="content">
+	<iframe src="" name="mainframe" style="width:100%;height:100%;" frameborder="0"></iframe>
+
+	</div>
+
+</div>
+<div style="clear:both"></div>
+<div class="pg_footer"></div>
+<script>
+$(document).ready(function(){
+//顶部菜单显示/隐藏
+$("#serv").click(function(){
+if($(".info").css("display")=="none")
+  $(".info").css("display","block");
+ else if($(".info").css("display")=="block")
+  $(".info").css("display","none");
+});
+//菜单弹出/隐藏
+$("#lefttitle").click(function(){
+$(".menu").fadeToggle();
+});
+//子菜单显示/隐藏
+var sid=0;
+$(".cdan").on("click","li",function(){
+if($(this).data("id")!=null)
+{
+sid=$(this).data("id");
+cdan(sid);
+//alert(sid);
+}else{
+sid=0;
+}
+
+});
+/*点击主菜单显示/隐藏子菜单，且更改后面的图标*/
+function cdan(sid){
+var iconf=$(".iconfont");
+if(sid=="1"){
+if($(".submenu1").css("display")=='none'){
+console.log(1);
+iconf.eq(0).remove();
+$(".cdan li:eq(1)").append("<span class=\"iconfont iconRadioBottom\" style=\"float:right;margin-right:20px\"></span>");
+console.log(sid);
+$(".submenu1").css("display","block");
+}
+else if($(".submenu1").css("display")=="block"){
+console.log(2);
+iconf.eq(0).remove();
+$(".cdan li:eq(1)").append("<span class=\"iconfont iconRadioRight\" style=\"float:right;margin-right:20px\"></span>");
+
+$(".submenu1").css("display","none");
+}
+}
+}
+
+$(".submenu1").click(function(){
+$(".submenu1").css("display","block");
+});
+
+});
+
+</script>
+</body>
+</html>

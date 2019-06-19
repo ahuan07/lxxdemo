@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<head>
+<title>后台管理系统demo1</title>
+<link rel="stylesheet" type="text/css" href="manage.css" />
+</head>
+<body>
+<div class="pg_header"></div>
+<div class="pg_content"></div>
+<div class="pg_footer"></div>
+
+</body>
+</html>

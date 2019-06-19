@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+<title>文本框</title>
+</head>
+<body>
+<form name="myform" onsubmit="return validateForm()">
+
+<textarea id="inputarea" cols="50" rows="10" name="mytext">
+</textarea>
+<p>
+<input type="submit" value="提交" />
+<input type="button" value="取消"/>
+</p>
+</form>
+<script>
+function validateForm(){
+ //document.getElementById("inputarea").value="您好!";
+ var x=document.getElementById("inputarea").value;
+   if (x==null || x==''){
+   alert("文本框内容不能为空");
+  return false;
+  }
+}
+</script>
+</body>
+</html>

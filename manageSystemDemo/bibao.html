@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/demo_css.css" />
+
+<title>js正则表达式</title>
+</head>
+<body>
+<div id="jsdemos">
+<p class="jtitle">javascript examples--闭包函数</p>
+<div class="code">
+<p>代码如下</p>
+<textarea htmlEscape="true" style="overflow:auto;width:600px;height:600px;">
+
+var add=(function(){
+ var counter=0;
+ return function(){
+ return counter+=1;
+ }
+})();
+add();
+add();
+add();
+var result=add();
+document.getElementById("result").innerText=result;
+</textarea>
+</div>
+<p id="result"></p>
+<script>
+var add=(function(){
+ var counter=0;
+ return function(){
+ return counter+=1;
+ }
+})();
+add();
+add();
+add();
+var result=add();
+document.getElementById("result").innerText=result;
+
+</script>
+</body>
+</html>

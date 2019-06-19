@@ -1,0 +1,42 @@
+#jsdemos{
+margin:0 auto;
+width:100%;
+background-color:#f6f6f6;
+padding-bottom:15px;
+}
+.jtitle{
+height:30px;
+position:relative;
+left:10px;
+top:10px;
+font-size:18px;
+font-weight:bold;
+}
+.main_c{
+padding-left:10px;
+}
+ul {
+padding-left:15px;
+list-style-type:none;
+}
+ul li{
+height:30px;
+line-height:30px;
+font-family:"黑体";
+}
+a{
+color:#2464B2;
+text-decoration:none;
+}
+hr{
+border:1px solid #cfcfcf;
+background-color:#fff;
+
+}
+.txt{
+border:1px solid #ccc;
+line-height:25px;
+height:25px;
+background-color:#fff;
+padding-left:10px;
+}
